@@ -1,0 +1,24 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "ca91a0c91a37c9106ff60c87330de6d876db729cd2159ad502a8ef770491e6d3"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.9"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "https://pypi.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "structure-home": {
+            "file": "https://download.moldiscovery.com/structure_home-0.2.0.tar.gz"
+        }
+    },
+    "develop": {}
+}
