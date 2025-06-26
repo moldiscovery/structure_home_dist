@@ -13,16 +13,6 @@ To setup the scripts execution environment, use the **pipenv** tool.
   pipenv shell
 ```
 
-## Install the library
-
-From the directory created in the step above, 
-install the structure_home library, provided as a .tar.gz file, so that it can 
-be imported in the sample scripts:
-
-```
-pip install structure_home-0.2.0.tar.gz
-```
-
 ## Usage
 
 Now, a python script can *import structure_home* and use its API.
