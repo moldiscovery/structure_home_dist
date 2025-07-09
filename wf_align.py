@@ -1,5 +1,5 @@
 """
-A sample workflow: align onto a target, compute pockets and MIFs
+A sample workflow: alignment of two A2A GPCRs
 """
 
 
@@ -11,8 +11,8 @@ biogps_dir = "/home/gabo/md/build/qt6_biogps/install"
 
 work_dir = "/tmp/structure_home"
 
-target_path = "/home/gabo/md/SIMON/test_align/3e7a.pdb1"
-target_name = "3e7a";
+target_path = "/home/gabo/md/STRUCTURE_HOME/align_test/5wf5.pdb"
+target_name = "5wf5"
 
 sh = structure_home.StructureHome()
 
@@ -22,8 +22,8 @@ sh.set_work_dir(work_dir)
 
 sh.load_pdb(target_path, target_name)
 
-pdb_path = "/home/gabo/md/SIMON/test_align/6dno.pdb1"
-pdb_name = "6dno";
+pdb_path = "/home/gabo/md/STRUCTURE_HOME/align_test/7utz.pdb"
+pdb_name = "7utz"
 
 sh.load_align_pdb(pdb_path, pdb_name, target_name)
 
@@ -34,7 +34,7 @@ pockets = sh.compute_pockets(pdb_name)
 for pocket in pockets:
     sh.compute_pocket_mifs(pdb_name, pocket)
 
-for pocket in pockets:
-    sh.compute_hoh(pdb_name, pocket)
+# for pocket in pockets:
+#     sh.compute_hoh(pdb_name, pocket)
 
 
