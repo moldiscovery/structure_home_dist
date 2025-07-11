@@ -6,8 +6,8 @@ A sample workflow: alignment of two A2A GPCRs
 import structure_home
 
 
-flap_dir = "/home/gabo/md/packages/FLAP3-25.01.29-rhel8/"
-biogps_dir = "/home/gabo/md/build/qt6_biogps/install"
+biogps_dir = "/home/gabo/md/packages/FLAP3-25.01.1-rhel8"
+flap_dir = "/home/gabo/md/pagkages/FLAP3-25.01.32-rhel8"
 
 work_dir = "/tmp/structure_home"
 
@@ -30,10 +30,11 @@ sh.load_pdb(rt_path, rt_name)
 
 pockets = sh.compute_pockets(rt_name)
 
-sh.compute_hoh(rt_name, '001_7utz') # pockets[0])
+# sh.compute_hoh(rt_name, '001_7utz')
+# sh.compute_hoh(rt_name, pockets[0])
 
-# for pocket in pockets:
-#     sh.compute_hoh(rt_name, pocket)
+for pocket in pockets:
+    sh.compute_hoh(rt_name, pocket)
 
 # now, align the structure and its features
 
