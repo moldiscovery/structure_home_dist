@@ -6,8 +6,8 @@ A sample workflow
 import structure_home
 
 
-biogps_dir = "/home/gabo/md/packages/FLAP3-25.01.1-rhel8"
-flap_dir = "/home/gabo/md/pagkages/FLAP3-25.01.32-rhel8"
+biogps_dir = "/home/gabo/md/packages/BioGPS-25.01.14-rhel8"
+flap_dir = "/home/gabo/md/packages/FLAP3-25.01.32-rhel8"
 
 work_dir = "/tmp/structure_home"
 
