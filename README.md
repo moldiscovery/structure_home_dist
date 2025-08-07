@@ -38,7 +38,13 @@ Run the following command from the shell:
 curl -fsSL https://pyenv.run | bash
 ```
 
-Three more bash commands are required to set it up, listed [here](https://github.com/pyenv/pyenv?tab=readme-ov-file#bash).
+Three more bash commands are required to set it up, listed [here](https://github.com/pyenv/pyenv?tab=readme-ov-file#bash). Typically, when working on the bash shell:
+
+```
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+```
 
 Full install instruction available in the [pyenv official documentation](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
 
