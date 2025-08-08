@@ -8,7 +8,7 @@ This package provides some python scripts that use the **structure_home** API to
 ## Download FLAP3 and BioGPS
 
 First of all, download the [FLAP3](https://download.moldiscovery.com/FLAP3-25.01.32-rhel8.tar.gz)
-and [BioGPS](https://download.moldiscovery.com/BioGPS-25.01.14-rhel8.tar.gz) packages. Then:
+and [BioGPS](https://download.moldiscovery.com/BioGPS-25.01.15-rhel8.tar.gz) packages. Then:
 
 - unpack them in a local directory;
 - provide them with a valid license string.
