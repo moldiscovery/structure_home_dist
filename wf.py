@@ -24,10 +24,10 @@ sh.load_pdb(pdb_path, pdb_name)
 
 pockets = sh.compute_pockets(pdb_name)
 
-# for pocket in pockets:
-#     sh.compute_pocket_mifs(pdb_name, pocket)
+for pocket in pockets:
+    sh.compute_pocket_mifs(pdb_name, pocket)
 
 for pocket in pockets:
-    sh.compute_hoh(pdb_name, pocket)
+    sh.compute_hoh(pdb_name, pocket, save_vida=True)
 
 
