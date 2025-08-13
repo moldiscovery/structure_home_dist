@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-structure-home = {file = "https://download.moldiscovery.com/structure_home-0.5.0.tar.gz", version = "==0.5.0"}
+structure-home = {file = "https://download.moldiscovery.com/structure_home-0.5.2.tar.gz"}
 
 [dev-packages]
 
