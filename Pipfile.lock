@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "1df90cacce4793a4c175710457607e7b348c7fdc65fdc21f755f526d82d40f27"
+            "sha256": "139120481a0d56c2556ed77e036b6e243f03897fc84598becd7264ad8c11a39e"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -17,7 +17,7 @@
     },
     "default": {
         "structure-home": {
-            "file": "https://download.moldiscovery.com/structure_home-0.5.3.tar.gz"
+            "file": "https://download.moldiscovery.com/structure_home-0.5.4.tar.gz"
         }
     },
     "develop": {}
