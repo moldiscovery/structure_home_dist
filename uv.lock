@@ -332,8 +332,8 @@ wheels = [
 
 [[package]]
 name = "structure-home"
-version = "0.6.0"
-source = { url = "https://download.moldiscovery.com/structure_home-0.6.0.tar.gz" }
+version = "0.6.1"
+source = { url = "https://download.moldiscovery.com/structure_home-0.6.1.tar.gz" }
 dependencies = [
     { name = "ruff" },
     { name = "setuptools" },
@@ -341,7 +341,7 @@ dependencies = [
     { name = "sphinx-rtd-theme" },
     { name = "typeguard" },
 ]
-sdist = { hash = "sha256:65c7812dd28b1805fcb89f78f83df31836dbdb72c3b62e008a2cb669dd7e2be2" }
+sdist = { hash = "sha256:2fa1e93e032022ae147be6173d5d4f1ab4cd401e092107b4c1e4d98c53e22b33" }
 
 [package.metadata]
 requires-dist = [
@@ -361,7 +361,7 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.6.0.tar.gz" }]
+requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.6.1.tar.gz" }]
 
 [[package]]
 name = "typeguard"
