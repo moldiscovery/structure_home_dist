@@ -1,0 +1,12 @@
+[project]
+name = "structure-home-dist"
+version = "0.1.0"
+description = "Usage examples for the StructureHome API"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "structure-home",
+]
+
+[tool.uv.sources]
+structure-home = { url = "https://download.moldiscovery.com/structure_home-0.6.0.tar.gz" }

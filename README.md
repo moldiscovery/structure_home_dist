@@ -4,6 +4,7 @@ This package provides some python scripts that use the **structure_home** API to
 
 - **wf.py** imports a protein into a workspace and computes pockets, HOHs and mifs on it
 - **wf_align.py** allows to align a protein on a target
+- **wf_align_optsel.py** allows to look for the optimal alignment target, out of a set of proteins
 
 ## Download FLAP3 and BioGPS
 
@@ -15,14 +16,13 @@ and [BioGPS](https://download.moldiscovery.com/BioGPS-25.01.15-rhel8.tar.gz) pac
 
 ## Requirements
 
-Structure Home comes as a python package, set up using the python **setuptools** utilities.
+Structure Home comes as a python package, set up using the **Astral UV** package manager.
 
 To deploy it, a bunch of widespread usage tools should be available in the 
 host machine:
 
-- sqlite3, to access the metadata DB;
-- pyenv, allowing to automate the installation of the right python interpreter version;
-- pipenv, which automates the setup of a python execution environment.
+- **sqlite3**, to access the metadata DB;
+- **Astral UV**, to setup the execution environment
 
 ### sqlite3
 
@@ -30,39 +30,23 @@ Install it using your standard distribution package manager.
 
 On Ubuntu, the *libsqlite3-dev* package is required.
 
-### pyenv
+### Astral UV
 
-Run the following command from the shell:
-
-```
-curl -fsSL https://pyenv.run | bash
-```
-
-Three more bash commands are required to set it up, listed [here](https://github.com/pyenv/pyenv?tab=readme-ov-file#bash). Typically, when working on the bash shell:
+To install it in your working environment, type:
 
 ```
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
-echo 'eval "$(pyenv init - bash)"' >> ~/.bashrc
+curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Full install instruction available in the [pyenv official documentation](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
-
-### pipenv
-
-Install it using the standard distribution package manager, or using *pip*:
-
-```
-pip install pipenv
-```
+Chech [here](https://docs.astral.sh/uv/getting-started/installation/) for more installation methods.
 
 ## Environment setup
 
-Use the pipenv tool to setup the scripts execution environment.
+Use the **uv** tool to setup the scripts execution environment.
 From the main structure_home_dist directory run:
 
 ```
-  pipenv sync
+  uv sync
 ```
 
 ## Usage
@@ -75,9 +59,8 @@ Before running the scripts, open them with a text editor and set the following v
 
 Then, update the path and name of your input proteins.
 
-Finally, activate the virtual environment and run the script:
+Finally, from the main structure_home_dist directory run:
 
 ```
-pipenv shell
-python structure_home_dist/wf.py
+uv run wf.py
 ```
