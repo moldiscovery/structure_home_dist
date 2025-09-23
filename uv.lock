@@ -4,9 +4,9 @@ requires-python = ">=3.13"
 
 [[package]]
 name = "structure-home"
-version = "0.7.1"
-source = { url = "https://download.moldiscovery.com/structure_home-0.7.1.tar.gz" }
-sdist = { hash = "sha256:4b615db434aad3afc69c701c6e7c291732cde0cfdce918e5cc20ca2f0f04e5cf" }
+version = "0.8.1"
+source = { url = "https://download.moldiscovery.com/structure_home-0.8.1.tar.gz" }
+sdist = { hash = "sha256:85e81105d8e518457864ba331412c00794c20b1cbbe450ce3eddb393089f1b60" }
 
 [[package]]
 name = "structure-home-dist"
@@ -17,4 +17,4 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.7.1.tar.gz" }]
+requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.8.1.tar.gz" }]
