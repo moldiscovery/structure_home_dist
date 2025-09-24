@@ -34,7 +34,7 @@ On Ubuntu, the *libsqlite3-dev* package is required.
 
 To install it in your working environment, type:
 
-```
+```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
@@ -45,7 +45,7 @@ Chech [here](https://docs.astral.sh/uv/getting-started/installation/) for more i
 Use the **uv** tool to setup the scripts execution environment.
 From the main structure_home_dist directory run:
 
-```
+```bash
   uv sync
 ```
 
@@ -61,6 +61,6 @@ Then, update the path and name of your input proteins.
 
 Finally, from the main structure_home_dist directory run:
 
-```
+```bash
 uv run wf.py
 ```
