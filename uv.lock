@@ -3,10 +3,31 @@ revision = 3
 requires-python = ">=3.13"
 
 [[package]]
+name = "gemmi"
+version = "0.7.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6d/ed/aee9d2e2462ee117c15ed02082999804dd6c52a2be17f1198c9c805c5716/gemmi-0.7.3.tar.gz", hash = "sha256:32069b111216aad58a9724640fb23a31309c15a1aaf16164b4c9addc3677fadb", size = 1364609, upload-time = "2025-07-05T17:33:00.224Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/93/e2/c45cd48ec7cc0f49e182d8a736355a61edf0fc2ac060b90fc822c4fca067/gemmi-0.7.3-cp313-cp313-macosx_10_14_x86_64.whl", hash = "sha256:5a3b3bd9213577726ea2c2280150d05ee2c055d7f970ae2af9a5c0b7e0ec142c", size = 2698309, upload-time = "2025-07-05T17:33:56.777Z" },
+    { url = "https://files.pythonhosted.org/packages/60/06/6e3a083a02d2a1b7da69dce5538d51b4a83dc308e3ea9e21edcf324e10de/gemmi-0.7.3-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:f4e721101db02e4a23f242d1f13767183d004ab31d4444c62445e6429d8a3fe8", size = 2308749, upload-time = "2025-07-05T17:33:58.435Z" },
+    { url = "https://files.pythonhosted.org/packages/76/d3/f32dac583955c3cf43d7571409f9cbaf15be2af8bebc155e607605254279/gemmi-0.7.3-cp313-cp313-manylinux_2_27_aarch64.manylinux_2_28_aarch64.whl", hash = "sha256:dc928bd4567effd55399714b7f99922d84d128b2f061ad499a81dd5b800c8742", size = 2254384, upload-time = "2025-07-05T17:34:00.383Z" },
+    { url = "https://files.pythonhosted.org/packages/db/9e/024450978a674b2f021aa1f46b6fa73823713c7fe8b5d713fbd6defdb157/gemmi-0.7.3-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl", hash = "sha256:8d1a3e18fb7ac33df4325a0e846cad7c613ec90df0499f579d6aba1ccc15796a", size = 2579132, upload-time = "2025-07-05T17:34:02.408Z" },
+    { url = "https://files.pythonhosted.org/packages/37/81/64b296e7ef51b5dc90cc9a0d0ddb244ee945330c05e1916e7d1a069a4827/gemmi-0.7.3-cp313-cp313-musllinux_1_2_aarch64.whl", hash = "sha256:b7c6f3450e36bb08b63c8e514e79f08ca1eb7c0d6963440d25b426d34749dfed", size = 2757152, upload-time = "2025-07-05T17:34:04.369Z" },
+    { url = "https://files.pythonhosted.org/packages/a3/7f/2be74c1ec33903434f9f71ae10f11e5bf905e9d9c7440be00e30228c657d/gemmi-0.7.3-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:84f1ec474c42c8ce5fc373a9efb1a875683c3c879b6bc68d180d9bb24b5fa2bf", size = 3082142, upload-time = "2025-07-05T17:34:07.011Z" },
+    { url = "https://files.pythonhosted.org/packages/28/38/c5c1b52c16ef70b9e7e0392f6298b93dd17783c3c34a92512825b1617841/gemmi-0.7.3-cp313-cp313-win_amd64.whl", hash = "sha256:ffcd45974f4f0f1eea212679697e01f5048842754af6daeb06128bf5df2929ce", size = 1967528, upload-time = "2025-07-05T17:34:09.714Z" },
+]
+
+[[package]]
 name = "structure-home"
-version = "0.9.0"
-source = { url = "https://download.moldiscovery.com/structure_home-0.9.0.tar.gz" }
-sdist = { hash = "sha256:42ced560657752fb776e9a508ceaa2040b959924dab80ad6fa9b52a96027e27f" }
+version = "0.11.0"
+source = { url = "https://download.moldiscovery.com/structure_home-0.11.0.tar.gz" }
+dependencies = [
+    { name = "gemmi" },
+]
+sdist = { hash = "sha256:bcdbd03d9aa736de3e01f56ab776f1530c1b33582c3bcd5e01ced09ab788c6ee" }
+
+[package.metadata]
+requires-dist = [{ name = "gemmi", specifier = ">=0.7.3" }]
 
 [[package]]
 name = "structure-home-dist"
@@ -17,4 +38,4 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.9.0.tar.gz" }]
+requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.11.0.tar.gz" }]
