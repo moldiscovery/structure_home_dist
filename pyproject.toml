@@ -9,4 +9,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-structure-home = { url = "https://download.moldiscovery.com/structure_home-0.13.1.tar.gz" }
+structure-home = { url = "https://download.moldiscovery.com/structure_home-0.13.2.tar.gz" }
