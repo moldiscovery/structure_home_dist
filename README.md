@@ -92,6 +92,9 @@ Here's a comprehensive list of errors that may raise during the scripts executio
   provided in the StructureHome metadata.
   This error may happen because the GPCR Uniprot AC of the protein had been marked as
   deprecated, when the StructureHome metadata was generated.
+* NO_GENERIC_NUMBERING: raised when one of the proteins used in an alignment features no 
+  GPCRdb generic numbering. In this case alignment becomes impossible, because
+  we have no way to generate a common subset between the two structures.
 * COMMON_GNS_ERROR: while aligning a pair of structures, the script was unable 
   to compute a common residues subset between the target and the mobile structures.
   
