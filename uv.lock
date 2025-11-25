@@ -19,12 +19,12 @@ wheels = [
 
 [[package]]
 name = "structure-home"
-version = "0.14.12"
-source = { url = "https://download.moldiscovery.com/structure_home-0.14.12.tar.gz" }
+version = "0.14.13"
+source = { url = "https://download.moldiscovery.com/structure_home-0.14.13.tar.gz" }
 dependencies = [
     { name = "gemmi" },
 ]
-sdist = { hash = "sha256:bc0b702371205efac1568b9aa8d8e03cf0bcc1a994f438f5f4db398ae09ba3ff" }
+sdist = { hash = "sha256:94080996f2776b6342d3f897864617b30279fcdc4eeff8e15d344cb52104eb53" }
 
 [package.metadata]
 requires-dist = [{ name = "gemmi", specifier = ">=0.7.3" }]
@@ -38,4 +38,4 @@ dependencies = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.14.12.tar.gz" }]
+requires-dist = [{ name = "structure-home", url = "https://download.moldiscovery.com/structure_home-0.14.13.tar.gz" }]

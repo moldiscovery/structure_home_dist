@@ -107,7 +107,7 @@ Here's a comprehensive list of errors that may raise during the scripts executio
   
   ``` label <protein_code> and name CA, b if b != 0.00 else '' ```
   
-  Verify that a consisten number of chains.residues are available on both the structures.
+  Verify that a consistent number of chains.residues are available on both the structures.
 * ALIGN_ERROR: the alignment executable raised an error and couldn't output the aligned protein file.
   Run the logged align command line in a new shell, to get further details.
 * FIXPDB_ERROR: the fixpdb tool, allowing to filter the protein PDB and to extract various features,
