@@ -1,13 +1,12 @@
 """
-A sample workflow: alignment of two A2A GPCRs
+Preparation and alignment of GPCR structures
 """
 
 import shutil
 
 import structure_home
 
-
-biogps_dir = "/home/gabo/md/build/biogps/install"
+biogps_dir = "/home/gabo/md/packages/BioGPS-25.02.12-rhel8"
 flap_dir = "/home/gabo/md/packages/FLAP3-25.01.32-rhel8"
 
 work_dir = "/tmp/structure_home"
