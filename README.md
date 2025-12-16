@@ -115,3 +115,32 @@ Here's a comprehensive list of errors that may raise during the scripts executio
   encountered an error, likely because of a malformed PDB input. Run the logged fixpdb command line
   in a new shell, to get further details.
   
+# Metadata update
+
+This repository contains a file metadata.db, which aggregates GPCR and PDB data 
+from various sources:
+
+- a precomputed table of GPCR proteins, in csv format, providing for each structure 
+the following properties:
+    * 'Uniprot Entry name': the Uniprot class name (HCAR1_HUMAN, ACM2_HUMAN, ...)
+    * 'Uniprot AC': the Uniprot accession code (Q9BXC0, P08172, ...)
+    * 'PDB ID': the 4-digit protein PDB code
+    * 'Class': the GPCR class the protein belongs to. (A, B1, C...)
+- various metadata from RCSB.org
+- the generic residue numbering, provided by GPCRdb
+- residue index PDB to UNIPROT mapping, from EMBL
+- additional custom residue mappings, from a user provided csv table
+
+## Usage
+
+Edit the 'update_metadata.py' script, update the values of the following variabiles:
+
+* metadata: path to the GPCR proteins table
+* db_path: path to the destination DB file
+* custom_mapping: path to the CSV providing custom PDB to UNIPROT residues mapping
+
+Then, just run from the main project directory:
+
+```
+uv run update_metadata.py
+```

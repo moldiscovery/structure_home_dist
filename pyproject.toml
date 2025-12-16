@@ -9,4 +9,11 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-structure-home = { url = "https://download.moldiscovery.com/structure_home-0.14.15.tar.gz" }
+structure-home = { url = "https://download.moldiscovery.com/structure_home-0.15.0.tar.gz" }
+
+[dependency-groups]
+devel = [
+    "dateutils>=0.6.12",
+    "pandas>=2.3.3",
+    "requests>=2.32.5",
+]
