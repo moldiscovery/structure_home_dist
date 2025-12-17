@@ -152,3 +152,12 @@ uv run update_metadata.py
 
 To use the resulting **metadata DB** file, assign its path to the variables **metadata**
  available in the various workflow scripts.
+ 
+## Custom structures
+
+The script also allows to store essential information about internal structures, 
+whose metadata is not available on public sources.
+
+Add them to the Custom_GPCR_table.csv, providing each structure with a unique name.
+
+Them run again the update_metadata.py script.
