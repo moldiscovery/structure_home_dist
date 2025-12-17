@@ -115,7 +115,7 @@ Here's a comprehensive list of errors that may raise during the scripts executio
   encountered an error, likely because of a malformed PDB input. Run the logged fixpdb command line
   in a new shell, to get further details.
   
-# Metadata update
+# Structure Home Metadata
 
 This repository contains a file metadata.db, which aggregates GPCR and PDB data 
 from various sources:
@@ -131,16 +131,24 @@ the following properties:
 - residue index PDB to UNIPROT mapping, from EMBL
 - additional custom residue mappings, from a user provided csv table
 
-## Usage
+## How to update
 
-Edit the 'update_metadata.py' script, update the values of the following variabiles:
+The metadata can be incrementally updated, running the attached script **update_metadata.py**
+
+First of all, add some new GPCR structures to the **GPCR metadata table**, providing for each of them 
+an uniprot AC, the corresponding uniprot name, a unique ID and the GPCR classe.
+
+Then, open **update_metadata.py** and update the values of the following variables:
 
 * metadata: path to the GPCR proteins table
-* db_path: path to the destination DB file
+* db_path: path to the destination **metadata DB** file
 * custom_mapping: path to the CSV providing custom PDB to UNIPROT residues mapping
 
-Then, just run from the main project directory:
+Finally, just run the script from the main project directory:
 
 ```
 uv run update_metadata.py
 ```
+
+To use the resulting **metadata DB** file, assign its path to the variables **metadata**
+ available in the various workflow scripts.
