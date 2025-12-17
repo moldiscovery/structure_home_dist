@@ -10,14 +10,14 @@ import itertools
 import structure_home
 
 
-biogps_dir = "/home/gabo/md/packages/BioGPS-25.01.24-rhel8"
-flap_dir = "/home/gabo/md/packages/FLAP3-25.01.32-rhel8"
+biogps_dir = "/home/user/packages/BioGPS-25.02.12-rhel8"
+flap_dir = "/home/user/packages/FLAP3-25.01.32-rhel8"
 metadata = 'metadata.db'
 
 work_dir = "/tmp/structure_home/test_align_optsel"
 
 # a directory containing the alignment targets
-targets_dir = "/tmp/bench_sh/repo"
+targets_dir = "/tmp/structure_home/repo"
 
 generic_re = re.compile('(.{4})\\.pdb')
 classc_re = re.compile('.+_(.{4})[A-Z]?\\.pdb')

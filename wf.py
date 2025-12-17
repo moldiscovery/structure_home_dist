@@ -6,12 +6,12 @@ A sample workflow
 import structure_home
 
 
-biogps_dir = "/home/gabo/md/build/biogps/install"
-flap_dir = "/home/gabo/md/packages/FLAP3-25.01.32-rhel8"
+biogps_dir = "/home/user/packages/BioGPS-25.02.12-rhel8"
+flap_dir = "/home/user/packages/FLAP3-25.01.32-rhel8"
 
 work_dir = "/tmp/structure_home_test"
 
-pdb_path = "/home/gabo/md/STRUCTURE_HOME/5VEW.pdb"
+pdb_path = "/home/user/STRUCTURE_HOME/5VEW.pdb"
 pdb_name = "5vew"
 
 metadata = 'metadata.db'
