@@ -12,4 +12,8 @@ structure_home.update_metadata(
 
 # incremental insertion of custom structures
 internal_data = "Custom_GPCR_table.csv"
-structure_home.add_internal_codes(db_path, internal_data)
+internal_custom_mapping = "internal_custom_mapping.csv"
+structure_home.add_internal_codes(
+    db_path,
+    internal_data,
+    internal_custom_mapping)
