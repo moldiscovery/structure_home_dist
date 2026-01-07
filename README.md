@@ -155,9 +155,24 @@ To use the resulting **metadata DB** file, assign its path to the variables **me
  
 ## Custom structures
 
-The script also allows to store essential information about internal structures, 
-whose metadata is not available on public sources.
+The script also allows to store the information required to work on custom structures, 
+whose metadata is not available on public repositories.
 
-Add them to the Custom_GPCR_table.csv, providing each structure with a unique name.
+Add the required information to the **internal_GPCR_table.csv** file. 
 
-Them run again the update_metadata.py script.
+For each structure, the following data is required:
+
+* **PDB ID**: a unique protein identifier.
+* **Chain**: the code of the protein GPCR chain
+* **Uniprot AC**: the uniprot code of the GPCR chain. Required to infer the generic chain residues numbering.
+* **Uniprot entry name**: the uniprot name of the GPCR chain
+* **Class**: the class of the protein GPCR chain
+
+Then, run again the **update_metadata.py** script:
+
+```
+uv run update_metadata.py
+```
+
+Once again, ensure that the resulting **metadata DB** file is in use, assigned to the 
+variables **metadata** occuring in the various workflow scripts.
