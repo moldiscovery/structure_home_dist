@@ -3,8 +3,9 @@
 This package provides some python scripts that use the **structure_home** API to perform various operations on a PDB protein:
 
 - **wf.py** imports a protein into a workspace and computes pockets, HOHs and mifs on it
-- **wf_align.py** allows to align a protein on a target
-- **wf_align_optsel.py** allows to look for the optimal alignment target, out of a set of proteins
+- **wf_align.py** allows to align a protein and its pocket/water networks on a template structure
+- **wf_align_optsel.py** allows to look for the optimal template structure for alignment, out of a set of proteins
+- **update_metadata.py** allows to incrementally update the metadata.db file for new GPCR structures from RCSB
 
 ## Download FLAP3 and BioGPS
 
@@ -27,19 +28,19 @@ host machine:
 
 ### sqlite3
 
-Install it using your standard distribution package manager. 
+Install sqlite3 using your standard distribution package manager. 
 
 On Ubuntu, the *libsqlite3-dev* package is required.
 
 ### Astral UV
 
-To install it in your working environment, type:
+To install Astral UV in your working environment, type:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-Chech [here](https://docs.astral.sh/uv/getting-started/installation/) for more installation methods.
+Check [here](https://docs.astral.sh/uv/getting-started/installation/) for more installation methods.
 
 ## Environment setup
 
@@ -94,15 +95,15 @@ Here's a comprehensive list of errors that may raise during the scripts executio
   This error may happen because the GPCR Uniprot AC of the protein had been marked as
   deprecated, when the StructureHome metadata was generated.
 * NO_GENERIC_NUMBERING: raised when one of the proteins used in an alignment features no 
-  GPCRdb generic numbering. In this case alignment becomes impossible, because
+  generic GPCR residue numbering scheme in GPCRdb. In this case alignment becomes impossible, because
   we have no way to generate a common subset between the two structures.
 * COMMON_GNS_ERROR: while aligning a pair of structures, the script was unable 
   to compute a common residues subset between the target and the mobile structures.
   
   The common GNS (which stands for Generic-Numbered Subset) is computed 
-  selecting the residues available in both the structures, according to the GPCRdb Generic Numbering.
+  selecting the residues available in both the structures, according to the generic GPCR residue numbering schemes in GPCRdb.
   
-  Verify that the two structures are provided with Generic Numberings: 
+  To verify that the two structures are provided with Generic GPCR Residue Numbering: 
   open their _GNS.pdb files in PyMOL, verify that they're not empty.
   Display the Generic Numbers by typing the following command:
   
@@ -125,24 +126,24 @@ the following properties:
     * 'Uniprot Entry name': the Uniprot class name (HCAR1_HUMAN, ACM2_HUMAN, ...)
     * 'Uniprot AC': the Uniprot accession code (Q9BXC0, P08172, ...)
     * 'PDB ID': the 4-digit protein PDB code
-    * 'Class': the GPCR class the protein belongs to. (A, B1, C...)
+    * 'Class': the GPCR class the protein belongs to. (A, B1, B2, C...)
 - various metadata from RCSB.org
-- the generic residue numbering, provided by GPCRdb
+- the generic GPCR residue numbering system, provided by GPCRdb
 - residue index PDB to UNIPROT mapping, from EMBL
 - additional custom residue mappings, from a user provided csv table
 
-## How to update
+## Submission of new public structures
 
 The metadata can be incrementally updated, running the attached script **update_metadata.py**
 
-First of all, add some new GPCR structures to the **GPCR metadata table**, providing for each of them 
-an uniprot AC, the corresponding uniprot name, a unique ID and the GPCR classe.
+First of all, add some new GPCR structures to the **RCSB_GPCR_structure_table.csv**, providing for each of them 
+an uniprot AC, the corresponding uniprot name, a unique ID and the GPCR class.
 
 Then, open **update_metadata.py** and update the values of the following variables:
 
-* metadata: path to the GPCR proteins table
-* db_path: path to the destination **metadata DB** file
-* custom_mapping: path to the CSV providing custom PDB to UNIPROT residues mapping
+* metadata: path to the public GPCR proteins table **RCSB_GPCR_structure_table.csv**
+* db_path: path to the destination metadata DB file **metadata.db** 
+* custom_mapping: path to the CSV file providing custom PDB to UNIPROT residues mapping **RCSB_GPCR_custom_mapping.csv**
 
 Finally, just run the script from the main project directory:
 
@@ -150,15 +151,15 @@ Finally, just run the script from the main project directory:
 uv run update_metadata.py
 ```
 
-To use the resulting **metadata DB** file, assign its path to the variables **metadata**
+To use the updated metadata DB file **metadata.db** file, assign its path to the variables **metadata**
  available in the various workflow scripts.
  
-## Custom structures
+## Submission of proprietary and custom structures
 
-The script also allows to store the information required to work on custom structures, 
+The script also allows to store the information required to work on proprietary and custom structures, 
 whose metadata is not available on public repositories.
 
-Add the required information to the **internal_GPCR_table.csv** file. 
+Add the required information to the **internal_GPCR_structure_table.csv** file. 
 
 For each structure, the following data is required:
 
